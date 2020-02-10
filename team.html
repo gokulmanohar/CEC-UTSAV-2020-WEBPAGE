@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+  background-image: linear-gradient(90deg, #23264f, #7d1021);
+  background-size:cover;
+  font-family: 'DEJAVU SANS';
+}
+* {
+   cursor: n-one;
+  }
+
+
+  ul {
+  list-style-type: none;
+  padding-top: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+li {
+  float: left;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color:transparent;
+}
+
+
+.active {
+  background-color: #D4AF37;
+  color: black;
+  border-radius: 30px;
+ }
+
+
+#gify{
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid #ffd700;
+}
+
+div.rbut {
+    position:absolute;
+    width: 25%;
+    right: 65%;
+    top: 20%;
+    padding-left: 5%;
+    /*=border: 3px solid blue;*/
+  }
+
+div.lbut {
+    position: absolute;
+    width: 25%;
+    left: 65%;
+    top: 20%;
+    padding-right:  5%;
+    /*border: 3px solid blue;*/
+  } 
+
+</style>
+</head>
+<body>
+
+  <ul>
+    <li style="width: 10%; height: 17%"><a class="Nactive" href="home.html"><img src="home.png" width=20%></img></a></li>
+    <li style="width: 22%; height: 17%"><a class="Nactive" href="schedule.html">Schedules</a></li>
+    <li style="width: 22%; height: 17%"><a class="active" href="team.html">Teams</a></li>
+    <li style="width: 22%; height: 17%"><a class="Nactive"href="gallery.html">Highlights</a></li>
+    <li style="width: 22%; height: 17%"><a class="Nactive" href="result.html">Results</a></li>
+  </ul>
+
+
+<div class="rbut">
+  <img id="gify" src="cho.gif" type="gif" >
+  <br><br><br><br>
+  <img id="gify" src="pun.gif" type="gif">
+</div>
+<div class="lbut">
+  <img id="gify" src="the.gif"type="gif">
+  <br><br><br><br>
+  <img id="gify" src="har.gif" type="gif" >
+</div>
+<div class= "score">
+  <button ></button>
+</div>
+
+</footer> 
+</div>
+<script>
+(function() {
+
+    const idleDurationSecs = 50;     
+    const redirectUrl = 'ad.html';  
+    let idleTimeout; 
+
+    const resetIdleTimeout = function() {
+
+          if(idleTimeout) clearTimeout(idleTimeout);
+
+       
+        idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+    };
+
+
+    resetIdleTimeout();
+
+ 
+    ['click', 'touchstart', 'mousemove'].forEach(evt => 
+        document.addEventListener(evt, resetIdleTimeout, false)
+    );
+
+})();
+
+</script>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</body>
+</html>

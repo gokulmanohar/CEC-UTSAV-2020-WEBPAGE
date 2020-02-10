@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body{
+    background-image: url("logo1.jpg");
+    background-size:cover;
+    }
+
+    * {
+    cursor: noYne;
+    }
+
+    h2 { 
+    font-family: 'Gabriola';
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 0.67em;
+    margin-left: 2em;
+    font-weight: bold;
+    color: #ffd700;     
+    }
+
+    div.rbut {
+    position:absolute;
+    width: 30%;
+    top: 35%;
+    right: 65%;
+    padding-left: 5%;
+    /*border: 3px solid blue;*/
+    } 
+
+    div.lbut {
+    position: absolute;
+    width: 30%;
+    top: 35%;
+    left: 65%;
+    padding-right:  5%;
+    /*border: 3px solid blue;*/
+    } 
+
+    .button {
+
+    background-color: transparent;
+    border: 2px solid #ffd700;
+    font-family: 'DEJAVU SANS';
+    color: white;
+    border-radius: 30px;
+    padding: 30px 50px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.4em;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+
+</style>
+</head>
+<body>
+
+    <h2>CEC UTSAV 2020</h2>
+  
+<div class="rbut">
+<button class="button" onclick="window.location.href = 'schedule.html';">Schedules</button>
+<br><br><br><br><br><br><br><br>
+<button class="button" onclick="window.location.href = 'team.html';">Teams</button>
+</div>
+
+<div class="lbut">
+    <button class="button" onclick="window.location.href = 'gallery.html';">Highlights</button>
+    <br><br><br><br><br><br><br><br>
+    <button class="button" onclick="window.location.href = 'result.html';">Results</button>
+    </div>
+
+<script>
+(functio-n() {
+
+    const idleDurationSecs = 50;     
+    const redirectUrl = 'ad.html';  
+    let idleTimeout; 
+
+    const resetIdleTimeout = function() {
+
+          if(idleTimeout) clearTimeout(idleTimeout);
+
+       
+        idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+    };
+
+
+    resetIdleTimeout();
+
+ 
+    ['click', 'touchstart', 'mousemove'].forEach(evt => 
+        document.addEventListener(evt, resetIdleTimeout, false)
+    );
+
+})();
+
+</script>
+</body>
+</html>

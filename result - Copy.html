@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+  background-image: url("bg.jpg");
+  height:100%;
+  width:100%;
+  background-size:cover;
+  margin:0;
+  padding:0;
+}
+
+ul {
+  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  left: 10%;
+  top: 0;
+  background-color: #333;
+}
+tr, td {
+  padding-left: 60px;
+  margin-left: 10px;
+  padding-top: 10px;
+}
+.imgcrd
+{
+	width:300px;
+	height:300px;
+}
+
+#myVideo {
+  
+  right: 0;
+  bottom: 0;
+  width:20%; 
+  height:20%;
+}
+li {
+  float: left;
+}
+
+li a {
+  left: 0;
+  top: 0;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+
+.active {
+  background-color:  #179ddc;
+  width: 50%;
+}
+#bckBtn {
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  padding: 10px;
+  border: none;
+  background:  #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 15%;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height:4%;
+  width:10%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<ul>
+  <li style="width: 10%; height: 17%"><a href="schedule.html" class="active"><img src="home.png" width=30px length=30px></img></a></li>
+  <li style="width: 20%; height: 17%"><a  href="schedule.html">Schedule</a></li>
+  <li style="width: 20%; height: 17%"><a class="btn" href="team.html">Team</a></li>
+  <li style="width: 20%; height: 17%"><a href="high.html">Highlights</a></li>
+  <li style="width: 20%; height: 17%"><a href="result.html">Results</a></li>
+</ul>
+
+
+<table style="padding-top:100px" table align ="middle" table style="padding-right:100%">
+
+  
+  <tr >
+   <td>
+  
+      <div class="flip-box">
+           <div class="flip-box-inner">
+            <div class="flip-box-front">
+             <img class ="imgcrd" src="r1.jpg">
+            </div>
+          
+             
+           </div>
+      </div>
+   </td>
+  <td>
+      <div class="flip-box">
+           <div class="flip-box-inner">
+            <div class="flip-box-front">
+             <img class ="imgcrd" src="r2.jpg">
+            </div>
+           
+            
+             
+           </div>
+      </div>
+   </td>
+  <td>
+      <div class="flip-box">
+           <div class="flip-box-inner">
+            <div class="flip-box-front">
+             <img class ="imgcrd" src="r3.jpg">
+            </div>
+           
+             
+             
+           </div>
+      </div>
+   </td>
+   <td>
+      <div class="flip-box">
+           <div class="flip-box-inner">
+            <div class="flip-box-front">
+             <img class ="imgcrd" src="r4.jpg">
+            </div>
+           
+             
+             
+           </div>
+      </div>
+   </td> 
+
+
+</div>
+
+</footer> 
+</div>
+<script>
+(function() {
+
+    const idleDurationSecs = 50;     
+    const redirectUrl = 'ad.html';  
+    let idleTimeout; 
+
+    const resetIdleTimeout = function() {
+
+          if(idleTimeout) clearTimeout(idleTimeout);
+
+       
+        idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+    };
+
+
+    resetIdleTimeout();
+
+ 
+    ['click', 'touchstart', 'mousemove'].forEach(evt => 
+        document.addEventListener(evt, resetIdleTimeout, false)
+    );
+
+})();
+
+</script>
+</body>
+</html>

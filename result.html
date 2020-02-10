@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body{
+  background: rgb(35,38,79);
+  background: linear-gradient(187deg, #1B2433, rgba(125,16,33,1) 100%);
+  font-family: 'DEJAVU SANS';
+}
+* {
+   cursor: n-one;
+  }
+
+#result {
+  padding-left:2.2%;
+  width:22%; 
+  height:22%;
+}
+
+ul {
+  list-style-type: none;
+  padding-top: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+li {
+  float: left;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color:transparent;
+}
+
+
+.active {
+  background-color: #D4AF37;
+  color: black;
+  border-radius: 30px;
+ }
+
+
+</style>
+</head>
+<body>
+  <ul>
+    <li style="width: 10%; height: 17%"><a class="Nactive" href="home.html"><img src="home.png" width=20%></img></a></li>
+    <li style="width: 22%; height: 17%"><a class="Nactive" href="schedule.html">Schedules</a></li>
+    <li style="width: 22%; height: 17%"><a class="Nactive" href="team.html">Teams</a></li>
+    <li style="width: 22%; height: 17%"><a class="Nactive"href="gallery.html">Highlights</a></li>
+    <li style="width: 22%; height: 17%"><a class="active" href="result.html">Results</a></li>
+  </ul>
+
+<div style ="padding-top: 10%">
+  <img id="result" src="r5.jpg" type="img/jpg" >
+  <img id="result" src="r6.jpg" type="img/jpg">
+  <img id="result" src="r7.jpg" type="img/jpg">
+  <img id="result" src="r8.jpg" type="img/jpg" >
+</div>
+<div style ="padding-top: 5%">
+  <img id="result" src="r9.jpg" type="img/jpg" >
+  <img id="result" src="r10.jpg" type="img/jpg">
+  <img id="result" src="r11.jpg" type="img/jpg">
+  <img id="result" src="r12.jpg" type="img/jpg" >
+</div>
+<div style ="padding-top: 5%">
+  <img id="result" src="r13.jpg" type="img/jpg" >
+  <img id="result" src="r14.jpg" type="img/jpg">
+  <img id="result" src="r15.jpg" type="img/jpg">
+  <img id="result" src="r16.jpg" type="img/jpg" >
+</div>
+<div style ="padding-top: 5%">
+  <img id="result" src="r1.jpg" type="img/jpg" >
+  <img id="result" src="r2.jpg" type="img/jpg">
+  <img id="result" src="r3.jpg" type="img/jpg">
+  <img id="result" src="r4.jpg" type="img/jpg" >
+</div>
+<div style ="padding-top: 5%">
+  <img id="result" src="r17.jpg" type="img/jpg" >
+</div>
+
+
+</footer> 
+</div>
+<script>
+(func-tion() {
+
+    const idleDurationSecs = 50;     
+    const redirectUrl = 'ad.html';  
+    let idleTimeout; 
+
+    const resetIdleTimeout = function() {
+
+          if(idleTimeout) clearTimeout(idleTimeout);
+
+       
+        idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+    };
+
+
+    resetIdleTimeout();
+
+ 
+    ['click', 'touchstart', 'mousemove'].forEach(evt => 
+        document.addEventListener(evt, resetIdleTimeout, false)
+    );
+
+})();
+
+</script>
+</body>
+</html>

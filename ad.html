@@ -1,0 +1,44 @@
+<html>
+<head><title>ad</title>
+<style>
+#myVideo {
+  /*position: fixed;*/
+  right: 0;
+  bottom: 0;
+  width: 100%; 
+  height: 100%;
+}
+</style>
+</head>
+<body><a href="home.html">
+  <img id="myVideo" src="proddec.jpg" type="img/jpg">
+  
+</a>
+<script>
+(function() {
+
+    const idleDurationSecs = 180;     
+    const redirectUrl = 'home.html';  
+    let idleTimeout; 
+
+    const resetIdleTimeout = function() {
+
+          if(idleTimeout) clearTimeout(idleTimeout);
+
+       
+        idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+    };
+
+
+    resetIdleTimeout();
+
+ 
+    ['click', 'touchstart', 'mousemove'].forEach(evt => 
+        document.addEventListener(evt, resetIdleTimeout, false)
+    );
+
+})();
+
+</script>
+</body>
+</html>

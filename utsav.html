@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+* {
+   cursor: no-ne;
+  }
+
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-width:100%; 
+  height: auto;
+}
+
+.count {
+  position: absolute;
+  bottom: 5%;
+  left: 35%;
+  font-size: 50px;
+  background: rgba(0, 0, 0, 0);
+  color: #f1f1f1;
+  padding: 20px;
+}
+.explore {
+  font-family: "Lucida Console", Monaco, monospace;
+  position: absolute;
+  left: 65%;
+  top: 53%;
+  font-size: 30px;
+  color: #b6bfef;
+}
+#myBtn {
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  padding: 10px;
+  border: none;
+  background: #ffd700;
+  color: #000;
+  cursor: pointer;
+  position: absolute;
+  left: 85%;
+  top: 58%;
+  border-radius: 50%;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="utsav.mp4" type="video/mp4">
+    
+
+</video>
+<div class="explore">
+  <a href="home.html" style="text-decoration: none;color: #ffd700;"><h1>EXPLORE</h1></a>
+</div>
+<div class="content" >
+  <button id="myBtn" onclick="window.location.href = 'home.html';">></button>
+</div>
+<div class="count">
+  <p id="timer"></p>
+</div>
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+<script>
+/*var countDownDate = new Date("Feb 02, 2020 12:30:00").getTime();
+
+var x = setInterval(function() {
+
+
+  var now = new Date().getTime();
+    
+
+  var distance = countDownDate - now;
+    
+ 
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+
+ if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "UTSAV2020";
+  }
+}, 1000);*/
+</script>
+
+</body>
+</html>
