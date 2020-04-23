@@ -9,7 +9,7 @@ body{
   font-family: 'DEJAVU SANS';
 }
 * {
-   cursor: n-one;
+   cursor: none;
   }
 
 #result {
@@ -60,23 +60,34 @@ li a:hover:not(.active) {
     <li style="width: 22%; height: 17%"><a class="Nactive"href="gallery.html">Highlights</a></li>
     <li style="width: 22%; height: 17%"><a class="active" href="result.html">Results</a></li>
   </ul>
-
-<div style ="padding-top: 10%">
-  <img id="result" src="r5.jpg" type="img/jpg" >
+  <div style ="padding-top: 10%">
+    <img id="result" src="r24.jpg" type="img/jpg" >
+    <img id="result" src="r27.jpg" type="img/jpg">
+    <img id="result" src="r26.jpg" type="img/jpg">
+    <img id="result" src="r25.jpg" type="img/jpg" >
+  </div>
+  <div style ="padding-top: 5%">
+    <img id="result" src="r21.jpg" type="img/jpg" >
+    <img id="result" src="r22.jpg" type="img/jpg">
+    <img id="result" src="r23.jpg" type="img/jpg">
+    <img id="result" src="r15.jpg" type="img/jpg" >
+  </div>
+  <div style ="padding-top: 5%">
+  <img id="result" src="r28.jpg" type="img/jpg" >
+  <img id="result" src="r20.jpg" type="img/jpg">
+  <img id="result" src="r19.jpg" type="img/jpg">
+  <img id="result" src="r18.jpg" type="img/jpg" >
+</div>
+<div style ="padding-top: 5%">
+  <img id="result" src="r9.jpg" type="img/jpg" >
   <img id="result" src="r6.jpg" type="img/jpg">
   <img id="result" src="r7.jpg" type="img/jpg">
   <img id="result" src="r8.jpg" type="img/jpg" >
 </div>
 <div style ="padding-top: 5%">
-  <img id="result" src="r9.jpg" type="img/jpg" >
   <img id="result" src="r10.jpg" type="img/jpg">
   <img id="result" src="r11.jpg" type="img/jpg">
   <img id="result" src="r12.jpg" type="img/jpg" >
-</div>
-<div style ="padding-top: 5%">
-  <img id="result" src="r13.jpg" type="img/jpg" >
-  <img id="result" src="r14.jpg" type="img/jpg">
-  <img id="result" src="r15.jpg" type="img/jpg">
   <img id="result" src="r16.jpg" type="img/jpg" >
 </div>
 <div style ="padding-top: 5%">
@@ -87,15 +98,18 @@ li a:hover:not(.active) {
 </div>
 <div style ="padding-top: 5%">
   <img id="result" src="r17.jpg" type="img/jpg" >
+  <img id="result" src="r13.jpg" type="img/jpg" >
+  <img id="result" src="r14.jpg" type="img/jpg">
+  <img id="result" src="r15.jpg" type="img/jpg">
 </div>
 
 
 </footer> 
 </div>
 <script>
-(func-tion() {
+(function() {
 
-    const idleDurationSecs = 50;     
+    const idleDurationSecs = 60;     
     const redirectUrl = 'ad.html';  
     let idleTimeout; 
 
@@ -116,7 +130,7 @@ li a:hover:not(.active) {
     );
 
 })();
-
+document.oncontextmenu = document.body.oncontextmenu = function() {return false;}
 </script>
 </body>
 </html>

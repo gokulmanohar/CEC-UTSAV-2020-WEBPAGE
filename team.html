@@ -4,13 +4,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body{
-  background-image: linear-gradient(90deg, #23264f, #7d1021);
-  background-size:cover;
+  background: rgb(35,38,79);
+  background: linear-gradient(90deg, #1B2433,  #3B2237, #1B2433, #3B2237,#1B2433);
   font-family: 'DEJAVU SANS';
 }
 * {
-   cursor: n-one;
+   cursor: none;
   }
+
+p{
+  text-align: center;
+  color: aliceblue;
+}
 
 
   ul {
@@ -57,7 +62,7 @@ div.rbut {
     right: 65%;
     top: 20%;
     padding-left: 5%;
-    /*=border: 3px solid blue;*/
+    /*border: 3px solid blue;*/
   }
 
 div.lbut {
@@ -84,13 +89,17 @@ div.lbut {
 
 <div class="rbut">
   <img id="gify" src="cho.gif" type="gif" >
-  <br><br><br><br>
+  <p>44 Points</p>
+  <br><br><br>
   <img id="gify" src="pun.gif" type="gif">
+  <p>63 Points</p>
 </div>
 <div class="lbut">
   <img id="gify" src="the.gif"type="gif">
-  <br><br><br><br>
+  <p>57 Points</p>
+  <br><br><br>
   <img id="gify" src="har.gif" type="gif" >
+  <p>43 Points</p>
 </div>
 
 </footer> 
@@ -98,45 +107,28 @@ div.lbut {
 <script>
 (function() {
 
-    const idleDurationSecs = 50;     
-    const redirectUrl = 'ad.html';  
-    let idleTimeout; 
+const idleDurationSecs = 60;     
+const redirectUrl = 'ad.html';  
+let idleTimeout; 
 
-    const resetIdleTimeout = function() {
+const resetIdleTimeout = function() {
 
-          if(idleTimeout) clearTimeout(idleTimeout);
+      if(idleTimeout) clearTimeout(idleTimeout);
 
-       
-        idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
-    };
+   
+    idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+};
 
 
-    resetIdleTimeout();
+resetIdleTimeout();
 
- 
-    ['click', 'touchstart', 'mousemove'].forEach(evt => 
-        document.addEventListener(evt, resetIdleTimeout, false)
-    );
+
+['click', 'touchstart', 'mousemove'].forEach(evt => 
+    document.addEventListener(evt, resetIdleTimeout, false)
+);
 
 })();
-
-</script>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
+document.oncontextmenu = document.body.oncontextmenu = function() {return false;}
 </script>
 </body>
 </html>

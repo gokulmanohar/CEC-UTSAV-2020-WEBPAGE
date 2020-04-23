@@ -11,6 +11,11 @@ body{
   height: 100%;
   margin: 0;
 }
+
+* {
+    cursor: none;
+    }
+    
 #fra{
   min-height: 90%;
 }
@@ -71,10 +76,30 @@ li a:hover:not(.active) {
   </iframe>
 </div>
 <script type="text/javascript">
-setTimeout(onUserInactivity, 1000 * 50)
-function onUserInactivity() {
-   window.location.href = "ad.html"
-}
+(function() {
+
+const idleDurationSecs = 60;     
+const redirectUrl = 'ad.html';  
+let idleTimeout; 
+
+const resetIdleTimeout = function() {
+
+      if(idleTimeout) clearTimeout(idleTimeout);
+
+   
+    idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+};
+
+
+resetIdleTimeout();
+
+
+['click', 'touchstart', 'mousemove'].forEach(evt => 
+    document.addEventListener(evt, resetIdleTimeout, false)
+);
+
+})();
+document.oncontextmenu = document.body.oncontextmenu = function() {return false;}
 </script>
 
 </div>

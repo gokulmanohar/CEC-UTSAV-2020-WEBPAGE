@@ -4,12 +4,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
     body{
+        /*
     background-image: url("logo1.jpg");
     background-size:cover;
+    background-repeat: no-repeat;
+    background-color: 	#672137;
+    */
+    background: rgb(35,38,79);
+    background: linear-gradient(90deg, #1B2433,  #3B2237,#1B2433,#1B2433,#3B2237,#1B2433);
     }
 
     * {
-    cursor: noYne;
+    cursor: none;
     }
 
     h2 { 
@@ -76,10 +82,10 @@
     </div>
 
 <script>
-(functio-n() {
+(function() {
 
-    const idleDurationSecs = 50;     
-    const redirectUrl = 'ad.html';  
+    const idleDurationSecs = 100;     
+    const redirectUrl = 'utsav.html';  
     let idleTimeout; 
 
     const resetIdleTimeout = function() {
@@ -99,7 +105,7 @@
     );
 
 })();
-
+document.oncontextmenu = document.body.oncontextmenu = function() {return false;}
 </script>
 </body>
 </html>
